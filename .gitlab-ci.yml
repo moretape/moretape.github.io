@@ -1,0 +1,14 @@
+image: netroby/alpine-rsync
+
+pages:
+  stage: deploy
+  script:
+    - echo 'Deploying to Gitlab Pages.'
+    - rsync -av --progress . public/ --exclude public --exclude .git
+    - rm public/.gitignore && rm public/.gitlab-ci.yml
+    - rm public/CNAME && rm public/README.md
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
