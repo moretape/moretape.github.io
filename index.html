@@ -26,6 +26,18 @@
   </script>
 
   <style>
+    @font-face {
+      font-family: 'Nexa';
+      src: url('./fonts/NexaBold/NexaBold.eot');
+      src: url('./fonts/NexaBold/NexaBold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/NexaBold/NexaBold.woff2') format('woff2'),
+        url('./fonts/NexaBold/NexaBold.woff') format('woff'),
+        url('./fonts/NexaBold/NexaBold.ttf') format('truetype'),
+        url('./fonts/NexaBold/NexaBold.svg#NexaBold') format('svg');
+      font-weight: bold;
+      font-style: normal;
+    }
+
     html,
     body {
       font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -40,7 +52,6 @@
     }
 
     body {
-      overflow: hidden;
       background: linear-gradient(215deg, #400989 22%, #6715a2 84%);
     }
 
@@ -67,6 +78,8 @@
       width: 100%;
       height: 100%;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
     .bg-image {
@@ -75,9 +88,8 @@
       left: 50%;
       transform: translate(-50%, -50%);
       height: 600px;
-      opacity: .4;
       width: auto;
-
+      opacity: .4;
     }
 
     .logo {
@@ -88,9 +100,11 @@
       top: calc(50% - 3.5rem);
       transform: translate(-50%, -50%);
       z-index: 999;
+      animation: fadeIn 2s ease forwards;
     }
 
     footer {
+      font-family: Nexa;
       position: absolute;
       bottom: 0;
       padding: 38px;
@@ -101,20 +115,18 @@
       font-size: 1rem;
       opacity: 0.5;
       z-index: 999;
-      font-family: Nexa;
-
     }
 
-    @font-face {
-      font-family: 'Nexa';
-      src: url('./fonts/NexaBold/NexaBold.eot');
-      src: url('./fonts/NexaBold/NexaBold.eot?#iefix') format('embedded-opentype'),
-        url('./fonts/NexaBold/NexaBold.woff2') format('woff2'),
-        url('./fonts/NexaBold/NexaBold.woff') format('woff'),
-        url('./fonts/NexaBold/NexaBold.ttf') format('truetype'),
-        url('./fonts/NexaBold/NexaBold.svg#NexaBold') format('svg');
-      font-weight: bold;
-      font-style: normal;
+    @keyframes fadeIn {
+      0% {
+        transform: translate(-50%, -20%);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
     }
   </style>
 </head>
