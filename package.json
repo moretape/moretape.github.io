@@ -1,0 +1,22 @@
+{
+  "name": "moretape.github.io",
+  "version": "1.0.0",
+  "description": "Official Moretape Github page",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve . -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moretape/moretape.github.io.git"
+  },
+  "author": "Moretape Team <team@moretape.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moretape/moretape.github.io/issues"
+  },
+  "homepage": "https://github.com/moretape/moretape.github.io#readme",
+  "devDependencies": {
+    "serve": "^11.3.0"
+  }
+}
